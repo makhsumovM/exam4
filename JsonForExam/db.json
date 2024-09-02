@@ -1,0 +1,46 @@
+{
+  "villas": [
+    {
+      "id": "1",
+      "name": "Villa Serenity",
+      "description": "A beautiful villa with stunning ocean views, surrounded by lush greenery. Perfect for a peaceful retreat.",
+      "budget": 15000,
+      "time": "3 months"
+    },
+    {
+      "id": "2",
+      "name": "Villa Elegance",
+      "description": "This luxurious villa offers modern amenities, a private pool, and is located just minutes away from the beach.",
+      "budget": 25000,
+      "time": "5 months"
+    },
+    {
+      "id": "3",
+      "name": "Villa Tranquility",
+      "description": "A cozy villa nestled in the mountains, offering breathtaking views and a serene atmosphere.",
+      "budget": 10000,
+      "time": "2 months"
+    },
+    {
+      "id": "4",
+      "name": "Villa Grandeur",
+      "description": "Spacious and grand, this villa is ideal for large families or groups, with multiple bedrooms and a large garden.",
+      "budget": 35000,
+      "time": "4 months"
+    },
+    {
+      "id": "5",
+      "name": "Villa Oasis",
+      "description": "An exotic villa with a tropical garden and a lagoon-style pool. A true paradise for relaxation.",
+      "budget": 20000,
+      "time": "3 months"
+    },
+    {
+      "id": "6",
+      "name": "Villa Harmony",
+      "description": "A modern villa with minimalist design, offering a peaceful environment with a Zen garden and yoga studio.",
+      "budget": 18000,
+      "time": "6 months"
+    }
+  ]
+}
