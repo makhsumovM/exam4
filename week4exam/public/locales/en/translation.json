@@ -6,6 +6,38 @@
     "Contact": "Contact",
     "Story": "Story",
     "Careers": "Careers",
-    "News": "News"
+    "News": "News",
+    "section1":{
+      "h1":"We build your dream house well and professionally",
+      "p":"Our team can build a house according to your wishes. Any design and concept, we will help make it happen."
+    },
+    "section2":{
+      "h1":"Our company",
+      "p":"Debuilds is a team of architects, interior design, and contractors who help our clients not only to build their dream building, but also to feel comfortable after the building is used.",
+      "p2":"We already handled",
+      "l1":"50+ Clients",
+      "l2":"30+ House",
+      "l3":"20+ Building"
+    },
+    "section3":{
+      "h1":"Our services",
+      "p":"Our services include building new buildings and renovating old buildings"
+    },
+    "section4":{
+      "h1":"Our benefits",
+      "p":"Our services include building new buildings and renovating old buildings"
+    },
+    "section5":{
+      "h1":"Gallery",
+      "p":"Here is a collection of images showcasing our work. Each image is presented in its own space.",
+      "h1_2":"What our clients say?",
+      "p_2":"See what our clients say about their new home"
+    },
+    "section7":{
+      "h1":"Want to get our offer updates and news?",
+      "p":"Submit your e-mail and we will give you update about information and discount. Every single week. (not spamming)"
+
+    }
+    
   }
   

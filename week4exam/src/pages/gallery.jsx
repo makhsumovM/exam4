@@ -3,6 +3,7 @@ import S1BG from "../assets/aboutS1Bg.png"
 import axios from 'axios';
 import { Button, TextField } from '@mui/material';
 import Villas from '../components/cards/villas';
+import AddDialog from '../components/dialogs/addDialog';
 const Gallery = () => {
 
   const api = "http://localhost:3000/villas"
@@ -17,9 +18,42 @@ const Gallery = () => {
   }
   ///forSearch
   const [search ,setSearch] = useState("")
+  
 useEffect(()=>{
   get()
 },[search])
+
+//forAddindVillas
+ const [isModalOpen, setIsModalOpen] =useState(false)
+ const openAddModal =()=>{
+  setIsModalOpen(true)
+}
+const closeAddModal =()=>{
+  setIsModalOpen(false)
+}
+
+const addingVilla =async(formData)=>{
+  try {
+
+    await axios.post(api,{...formData,id:Date.now().toString()})
+    get()
+    closeAddModal()
+  } catch (error) {
+    console.error(error)
+  }
+}
+
+
+///forDeleteVilla
+
+const deleteVilla = async(id)=>{
+  try {
+    await axios.delete(`${api}/${id}`)
+    get()
+  } catch (error) {
+    console.error(error)
+  }
+}
 
   return (
     <div>
@@ -28,17 +62,18 @@ useEffect(()=>{
      </div>
      <div className='section1 py-[100px]'>
       <div className='w-[90%] m-auto'>
-        <TextField placeholder='Search' variant='outlined' size='small' value={search} onChange={(el)=>setSearch(el.target.value)}/>
-        <Button variant='contained'>ADD</Button>
+        <TextField placeholder='Search' variant='outlined' size='small' value={search} onChange={(el)=>setSearch(el.target.value)} sx={{backgroundColor:"white", borderRadius:"20px"}}/>
+        <Button variant='contained' onClick={openAddModal}>ADD</Button>
       </div>
      </div>
-     <div className='grid justify-center gap-[20px] md:grid-cols-2 lg:grid-cols-3 justify-items-center'>
+     <div className='grid justify-center gap-[20px] md:grid-cols-2 lg:grid-cols-3 justify-items-center py-[50px]'>
       {villas.filter((e)=>{
         return e.name.toLowerCase().includes(search.toLowerCase());
       }).map((el)=>{
-        return <Villas key={el.id} name={el.name} description={el.description} budget={el.budget} time={el.time} ID={el.id}/>
+        return <Villas key={el.id} name={el.name} description={el.description} budget={el.budget} time={el.time} ID={el.id} deleteVilla={deleteVilla}/>
       })}
      </div>
+     <AddDialog isModalOpen={isModalOpen} closeAddModal={closeAddModal} addingVilla={addingVilla}/>
     </div>
   )
 }

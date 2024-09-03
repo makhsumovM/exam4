@@ -55,11 +55,6 @@ const Layout = () => {
         </Link>
       </ListItem>
       <ListItem button onClick={handleMenuItemClick}>
-        <Link to="story">
-          <ListItemText primary={t("Story")} />
-        </Link>
-      </ListItem>
-      <ListItem button onClick={handleMenuItemClick}>
         <Link to="careers">
           <ListItemText primary={t("Careers")} />
         </Link>
@@ -78,18 +73,18 @@ const Layout = () => {
         <div className='flex sm:gap-4 lg:w-[80%] lg:gap-[5%] xl:justify-around items-center'>
             <div><img src={logo} alt="Logo" /></div>
             <div className=''>
-            <div className='flex gap-3 dark:text-[white] m:hidden lg:flex lg:text-[18px] 2xl:text-[24px] lg:gap-[20px]'>
-                <Link to="/"><p className='dark:text-[white]'>{t('Home')}</p></Link>
-                <Link to="/about"><p className='dark:text-[white]'>{t('About')}</p></Link>
-                <Link to="/services"><p className='dark:text-[white]'>{t('Services')}</p></Link>
-                <Link to="/gallery"><p className='dark:text-[white]'>{t('Gallery')}</p></Link>
-                <Link to="/contact"><p className='dark:text-[white]'>{t('Contact')}</p></Link>
-                <Link to="/careers"><p className='dark:text-[white]'>{t('Careers')}</p></Link>
-                <Link to="/news"><p className='dark:text-[white]'>{t('News')}</p></Link>
+            <div className='flex gap-3 text-[white] m:hidden lg:flex lg:text-[18px] 2xl:text-[24px] lg:gap-[20px]'>
+                <Link to="/"><p className='text-[white]'>{t('Home')}</p></Link>
+                <Link to="/about"><p className='text-[white]'>{t('About')}</p></Link>
+                <Link to="/services"><p className='text-[white]'>{t('Services')}</p></Link>
+                <Link to="/gallery"><p className='text-[white]'>{t('Gallery')}</p></Link>
+                <Link to="/contact"><p className='text-[white]'>{t('Contact')}</p></Link>
+                <Link to="/careers"><p className='text-[white]'>{t('Careers')}</p></Link>
+                <Link to="/news"><p className='text-[white]'>{t('News')}</p></Link>
             </div>
             <div className='lg:hidden'>
                 <Button onClick={toggleDrawer(true)}>
-                <MenuIcon fontSize='large' color='success'/>
+                <MenuIcon fontSize='large' sx={{color:"#FFD700", fontSize:"50px"}}/>
                 </Button>
             </div>
             </div>
@@ -110,7 +105,7 @@ const Layout = () => {
       </header>
       <div>
             <Outlet />
-            <Drawer open={open} onClose={toggleDrawer(false)}>
+            <Drawer   PaperProps={{ sx: {width: "50vw"}}}  open={open} onClose={toggleDrawer(false)}>
             {menuItems}
             </Drawer>
       </div>

@@ -7,9 +7,9 @@ const About = () => {
   return (
     <div>
       <div className='section1  relative py-[200px] bg-no-repeat bg-cover bg-center'style={{backgroundImage:`url(${aboutS1Bg})`}}>
-        <h1 className='text-center text-white text-[32px] md:text-[48px] lg:text-[64px] 2xl:text-[96px]'>About our story - We are the best team</h1>
+        <h1 className='text-center text-white text-[32px] md:text-[48px] lg:text-[52] 2xl:text-[64px]'>About our story - We are the best team</h1>
       </div>
-      <div className='section2 py-[200px]'>
+      <div className='section2 py-[200px] dark:text-[white]'>
         <div className='flex flex-col gap-[20px] lg:flex-row lg:items-center 2xl:justify-center '>
           <div className='flex flex-col lg:w-[45%] lg:relative'>
             <img src={aboutS2png1} alt="" />
@@ -22,7 +22,7 @@ const About = () => {
           </div>
         </div>
       </div>
-      <div className='section3 py-[100px]'>
+      <div className='section3 py-[100px] '>
         <div className='bg-gradient-to-r from-[#023957] to-[#056088] flex flex-col gap-[20px] text-white justify-center items-center lg:flex-row py-[50px]'>
           <div className='lg:w-[50%]'>
             <h1 className='2xl:text-[64px]'>We love to make perfect   home</h1>

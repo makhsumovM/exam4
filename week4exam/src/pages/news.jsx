@@ -2,7 +2,12 @@ import React from 'react'
 import news1 from "../assets/News1.png"
 import news2 from "../assets/news2.png"
 import S1BG from "../assets/aboutS1Bg.png"
+import Aos from 'aos'
 const News = () => {
+  Aos.init({
+    duration: 1000,
+    once: false,
+  });
   return (
     <div>
       <div className='section1  relative py-[200px] bg-no-repeat bg-cover bg-center'style={{backgroundImage:`url(${S1BG})`}}>
@@ -18,9 +23,9 @@ const News = () => {
 
       <div className='bg-[url("./assets/fon.png")] w-full h-[580px] bg-no-repeat bg-cover mt-[-330px]'></div>
 
-      <div className="grid grid-cols-1 relative lg:grid-cols-3">
+      <div className="grid grid-cols-1 relative lg:grid-cols-3 justify-items-center" data-aos="zoom-in">
         <div
-          data-aos="fade-right"
+          
           className="w-[420px] h-[544px] shadow-lg shadow-indigo-500/40"
         >
           <img className="w-[300px] h-[250px]" src={news2} alt="" />
@@ -37,7 +42,7 @@ const News = () => {
         </div>
 
         <div
-          data-aos="fade-right"
+          
           className="w-[420px] h-[544px] shadow-lg shadow-indigo-500/40"
         >
           <img className="w-[300px] h-[250px]" src={news2} alt="" />
@@ -54,7 +59,7 @@ const News = () => {
         </div>
 
         <div
-          data-aos="fade-right"
+          
           className="w-[420px] h-[544px] shadow-lg shadow-indigo-500/40"
         >
           <img className="w-[300px] h-[250px]" src={news2} alt="" />

@@ -76,7 +76,7 @@ const Careers = () => {
                 />
                 <div className="basis-auto">$9000/month</div>
               </div>
-              <div className="px-12 py-6 mt-8 font-medium text-white whitespace-nowrap max-md:px-5">
+              <div className="px-12 py-6 mt-8 font-medium  dark:text- whitespace-nowrap max-md:px-5">
                 Details
               </div>
             </div>

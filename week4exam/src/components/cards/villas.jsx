@@ -7,7 +7,7 @@ import villa3 from "../../assets/villa3.png"
 import { Link } from 'react-router-dom'
 
 
-const Villas = ({name,description,budget,time,ID}) => {
+const Villas = ({name,description,budget,time,ID,deleteVilla}) => {
   return (
     <div>
       <Card sx={{ maxWidth: 345 }}>
@@ -27,12 +27,15 @@ const Villas = ({name,description,budget,time,ID}) => {
           </Typography>
         </CardContent>
       </CardActionArea>
-      <CardActions>
+      <CardActions sx={{display:"flex", alignItems:"center", justifyContent:"space-around"}}>
         <Link to={`/${ID}`}>
               <Button variant='contained' size='large' sx={{ padding: "20px", background: 'linear-gradient(to right, #056088, #09A7CA)', "^:hover": { background: "linear-gradient(to right, #056088, #09A7CA)" } }}>
               See process
             </Button>
         </Link>
+            <Button onClick={()=>deleteVilla(ID)} variant='contained' size='large' color='error' sx={{ padding: "20px",  "^:hover": { background: "linear-gradient(to right, #056088, #09A7CA)" } }}>
+              Delete
+            </Button>
       </CardActions>
     </Card>
     </div>
